@@ -8,7 +8,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-800 p-4">
+        <nav className="p-4">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <a href="/" className="flex items-center">
                     <span className="text-white font-bold text-xl">My Website</span> {/* Replace with your logo/brand */}
