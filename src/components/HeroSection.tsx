@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="py-20">
+        <section className="py-20 pb-[max(200px,20%)]">
             <div className="container mx-auto text-center">
                 <h1 className="text-5xl font-bold text-gray-100 leading-tight mb-6">
                     Welcome to Our Website

@@ -23,7 +23,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 bg-[rgba(243,244,246,0.1)]">
+    <section className="py-16 bg-[rgba(243,244,246,0.05)]">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <h2 className="text-3xl font-bold text-center text-gray-100 mb-8">
