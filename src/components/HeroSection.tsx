@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
     return (
         <section className="py-20 pb-[max(200px,20%)]">
