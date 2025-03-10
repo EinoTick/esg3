@@ -1,21 +1,54 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 import Navbar from "./components/NavBar.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 import ServicesSection from "./components/ServicesSection.tsx";
 import AboutUsSection from "./components/AboutUsSection.tsx";
+import Footer from "./components/Footer.tsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-        <Navbar/>
-        <HeroSection/>
-        <ServicesSection/>
-        <AboutUsSection/>
-    </>
-  )
+// Create new page components
+function HomePage() {
+    return (
+        <>
+            <HeroSection />
+            <ServicesSection />
+            <AboutUsSection />
+        </>
+    );
 }
 
-export default App
+function ServicesPage() {
+    return (
+        <div>
+            <h1>Our Services</h1>
+            {/* Add detailed service information here */}
+            <ServicesSection/>
+        </div>
+    );
+}
+
+function AboutPage() {
+    return (
+        <div>
+            <h1>About Us</h1>
+            {/* Add detailed about us information here */}
+            <AboutUsSection/>
+        </div>
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+            </Routes>
+            <Footer />
+        </Router>
+    );
+}
+
+export default App;
